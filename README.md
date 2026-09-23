@@ -1,5 +1,7 @@
 # 🐜 Ant System – Stigmergie statt Population-Operatoren
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-ant-system-demo.streamlit.app/)**
+
 Neuntes Stück der **Populations-Metaheuristiken-Linie** der "Konzepte"-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) –
 Operations Research und Machine Learning. Vierter und letzter unabhängiger Kontrast zu [genetic-algorithm-demo](https://sebastianhanisch-genetic-algorithm-demo.streamlit.app/):
 Ant System (Dorigo, 1992) bewegt eine Population über **indirekte Kommunikation** - Pheromonspuren auf den Kanten
