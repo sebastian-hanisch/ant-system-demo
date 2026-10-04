@@ -214,7 +214,7 @@ st.markdown(
 |---|---|---|
 | **Keine Pheromon-Obergrenze** | Ein früh gefundener, mittelmäßiger Pfad kann sich unbegrenzt verstärken - die ganze Kolonie legt sich vorzeitig darauf fest (Stagnation), ohne Mechanismus, das zu erkennen oder zu korrigieren. | Max-Min Ant System (τ_min/τ_max-Schranken) - separates Folgestück ([max-min-ant-system-demo](https://sebastianhanisch-max-min-ant-system-demo.streamlit.app/)) |
 | **Verdunstungsrate ρ ist gut gewählt** | Zu klein: altes Pheromon dominiert dauerhaft. Zu groß: gute Pfade verschwinden, bevor sie sich verstärken. | Muss von Hand eingestellt werden, wie bei jedem Regler dieser Linie |
-| **Einfache Pheromon-Initialisierung** | τ0=1 (konstant) statt der literaturüblichen NN-Tour-basierten Initialisierung ($\\tau_0 = 1/(n \\cdot L_{NN})$) - bewusste Vereinfachung. | Hier nicht umgesetzt, siehe README |
+| **Einfache Pheromon-Initialisierung** | τ0=1 (konstant) statt der literaturüblichen NN-Tour-basierten Initialisierung ($\\tau_0 = m/L_{NN}$ für das Ant System mit $m$ Ameisen; $1/(n \\cdot L_{NN})$ ist die Wahl des Ant Colony System) - bewusste Vereinfachung. | Hier nicht umgesetzt, siehe README |
 | **Kein Distanz-basierter Suchraum-Vorteil bei sehr großen Instanzen** | Bei vielen Stopps wächst der Rechenaufwand pro Generation mit $O(\\text{Ameisen} \\times \\text{Stopps}^2)$ - keine Beschleunigungstechniken (Kandidatenlisten etc.) umgesetzt. | Hier nicht umgesetzt |
 """
 )

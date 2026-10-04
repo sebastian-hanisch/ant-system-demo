@@ -58,7 +58,8 @@ für Übergangswahrscheinlichkeit und Pheromon-Update an konstruierten Beispiele
   Qualitätsverlust gegenüber dem Standardwert gemessen, ehrlich so berichtet statt eine symmetrische U-Form zu
   behaupten.
 - **Einfache Pheromon-Initialisierung** ($\tau_0=1$ konstant) statt der literaturüblichen NN-Tour-basierten
-  Initialisierung ($\tau_0 = 1/(n \cdot L_{NN})$).
+  Initialisierung ($\tau_0 = m/L_{NN}$ für das Ant System mit $m$ Ameisen, Dorigo und Stützle;
+  $1/(n \cdot L_{NN})$ ist die Wahl des Ant Colony System).
 - **Keine Beschleunigungstechniken** (Kandidatenlisten etc.) - Rechenaufwand wächst mit
   $O(\text{Ameisen} \times \text{Stopps}^2)$ je Generation.
 - **Letzter unabhängiger Kontrast-Ast dieser Linie** - kein Nachfolger außer dem MMAS-Fix.
