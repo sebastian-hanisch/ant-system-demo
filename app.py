@@ -212,15 +212,15 @@ st.markdown(
     """
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
-| **Keine Pheromon-Obergrenze** | Ein früh gefundener, mittelmäßiger Pfad kann sich unbegrenzt verstärken - die ganze Kolonie legt sich vorzeitig darauf fest (Stagnation), ohne Mechanismus, das zu erkennen oder zu korrigieren. | Max-Min Ant System (τ_min/τ_max-Schranken) - separates, geplantes Folgestück |
+| **Keine Pheromon-Obergrenze** | Ein früh gefundener, mittelmäßiger Pfad kann sich unbegrenzt verstärken - die ganze Kolonie legt sich vorzeitig darauf fest (Stagnation), ohne Mechanismus, das zu erkennen oder zu korrigieren. | Max-Min Ant System (τ_min/τ_max-Schranken) - separates Folgestück ([max-min-ant-system-demo](https://sebastianhanisch-max-min-ant-system-demo.streamlit.app/)) |
 | **Verdunstungsrate ρ ist gut gewählt** | Zu klein: altes Pheromon dominiert dauerhaft. Zu groß: gute Pfade verschwinden, bevor sie sich verstärken. | Muss von Hand eingestellt werden, wie bei jedem Regler dieser Linie |
 | **Einfache Pheromon-Initialisierung** | τ0=1 (konstant) statt der literaturüblichen NN-Tour-basierten Initialisierung ($\\tau_0 = 1/(n \\cdot L_{NN})$) - bewusste Vereinfachung. | Hier nicht umgesetzt, siehe README |
 | **Kein Distanz-basierter Suchraum-Vorteil bei sehr großen Instanzen** | Bei vielen Stopps wächst der Rechenaufwand pro Generation mit $O(\\text{Ameisen} \\times \\text{Stopps}^2)$ - keine Beschleunigungstechniken (Kandidatenlisten etc.) umgesetzt. | Hier nicht umgesetzt |
 """
 )
 st.caption(
-    "Ant System ist der vierte und letzte unabhängige Kontrast-Ast von GA in dieser Linie. Der geplante Fix-Nachfolger "
-    "Max-Min Ant System (behebt die Stagnationsgefahr) ist ein separates, noch nicht gebautes Stück."
+    "Ant System ist der vierte und letzte unabhängige Kontrast-Ast von GA in dieser Linie. Der Fix-Nachfolger "
+    "[Max-Min Ant System](https://sebastianhanisch-max-min-ant-system-demo.streamlit.app/) (behebt die Stagnationsgefahr) ist als separates Stück gebaut."
 )
 
 st.markdown("---")
@@ -242,6 +242,6 @@ Implementiert in `aco_algorithm.py` (Übergangswahrscheinlichkeit, Tourkonstrukt
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Populations-Metaheuristiken: GA bis Memetic](https://sebastianhanisch.net/konzepte-populations-metaheuristiken.html)."
 )

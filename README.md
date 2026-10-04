@@ -7,8 +7,8 @@ Operations Research und Machine Learning. Vierter und letzter unabhängiger Kont
 Ant System (Dorigo, 1992) bewegt eine Population über **indirekte Kommunikation** - Pheromonspuren auf den Kanten
 des Graphen (Stigmergie) - statt Mutation/Kovarianz-Adaption/Differenzvektor/Geschwindigkeit. Vehikel ist dieselbe
 diskrete Lieferroute wie genetic-algorithm-demo/nsga2-demo/nsga3-demo/moead-demo - das klassische TSP-Setting, für
-das ACO ursprünglich erfunden wurde. Hat einen geplanten Fix-Nachfolger Max-Min Ant System (Stützle & Hoos, 1996)
-für ein separates, noch nicht gebautes Stück.
+das ACO ursprünglich erfunden wurde. Hat einen Fix-Nachfolger Max-Min Ant System (Stützle & Hoos, 1996)
+als separates Stück ([max-min-ant-system-demo](https://sebastianhanisch-max-min-ant-system-demo.streamlit.app/)).
 
 ## Warum dieses Problem
 
@@ -52,7 +52,7 @@ für Übergangswahrscheinlichkeit und Pheromon-Update an konstruierten Beispiele
 
 - **Keine Pheromon-Obergrenze** - ein früh gefundener, mittelmäßiger Pfad kann sich unbegrenzt verstärken, die ganze
   Kolonie legt sich vorzeitig darauf fest (Stagnation), ohne Mechanismus, das zu erkennen oder zu korrigieren. Genau
-  das behebt der geplante Fix-Nachfolger Max-Min Ant System (τ_min/τ_max-Schranken) - separates, noch nicht gebautes
+  das behebt der Fix-Nachfolger Max-Min Ant System (τ_min/τ_max-Schranken) - separates, bereits gebautes
   Stück.
 - **Der erwartete Nachteil einer zu großen Verdunstungsrate zeigt sich hier nur schwach** - bis ρ=0,95 kein klarer
   Qualitätsverlust gegenüber dem Standardwert gemessen, ehrlich so berichtet statt eine symmetrische U-Form zu
@@ -61,7 +61,7 @@ für Übergangswahrscheinlichkeit und Pheromon-Update an konstruierten Beispiele
   Initialisierung ($\tau_0 = 1/(n \cdot L_{NN})$).
 - **Keine Beschleunigungstechniken** (Kandidatenlisten etc.) - Rechenaufwand wächst mit
   $O(\text{Ameisen} \times \text{Stopps}^2)$ je Generation.
-- **Letzter unabhängiger Kontrast-Ast dieser Linie** - kein Nachfolger außer dem geplanten MMAS-Fix.
+- **Letzter unabhängiger Kontrast-Ast dieser Linie** - kein Nachfolger außer dem MMAS-Fix.
 
 ## Tests
 
@@ -86,7 +86,7 @@ Anfang an angewendet).
 
 ## Bewusst nicht umgesetzt
 
-- Max-Min Ant System (τ_min/τ_max-Schranken gegen Stagnation) - geplanter Fix-Nachfolger, separates Stück.
+- Max-Min Ant System (τ_min/τ_max-Schranken gegen Stagnation) - Fix-Nachfolger, eigenes Stück (max-min-ant-system-demo).
 - NN-Tour-basierte Pheromon-Initialisierung.
 - Kandidatenlisten oder andere Beschleunigungstechniken für größere Instanzen.
 - Ein PDF-Export - wie bei den anderen Konzepte-Demos dieses Portfolios nicht Teil der Linie.
@@ -101,3 +101,7 @@ streamlit run app.py
 ```
 
 Gebaut mit Streamlit, Plotly und numpy.
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Populations-Metaheuristiken: GA bis Memetic](https://sebastianhanisch.net/konzepte-populations-metaheuristiken.html).
