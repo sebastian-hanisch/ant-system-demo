@@ -66,7 +66,7 @@ für Übergangswahrscheinlichkeit und Pheromon-Update an konstruierten Beispiele
 
 ## Tests
 
-55 Tests (`pytest tests/ -v`): Übergangswahrscheinlichkeit/Pheromon-Update per Handrechnung geprüft, Brute-Force-
+60 Tests (`pytest tests/ -v`): Übergangswahrscheinlichkeit/Pheromon-Update per Handrechnung geprüft, Brute-Force-
 Vergleich auf sehr kleinen Instanzen (eigene Implementierung UND `acopy` im Vergleich), Szenario-Erzeugung
 bitidentisch zu genetic-algorithm-demo/nsga2-demo geprüft, AppTest-Rauchtests (jedes Preset, Generation-Slider inkl.
 Abspielen, Permalink-Grenzen, beide Experimente + Sweep auf Abruf) und `test_claims.py` (jede Zahl aus diesem
